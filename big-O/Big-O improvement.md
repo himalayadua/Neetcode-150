@@ -37,13 +37,22 @@ all_fib(10)
 
 # Flaws
 - Redundant calculations
-    - The first code recalculates Fibonacci numbers multiple times
+    - code recalculates Fibonacci numbers multiple times
     - leading to an exponential increase in the number of function calls.
 
-
 # Improvement
+- Solution
+    - Use memoization to store previously calculated Fibonacci numbers 
+    - to avoid redundant computations
+    - Introduce a data structure, such as a list, to store the already computed Fibonacci numbers. 
+    - This allows the code to check if a value is already available before performing recursive calculations.
 
 
+# Solution
+- Memoization
+    - store the results of expensive function calls 
+    - reuses them when the same inputs occur again
+    - rather than recomputing the results.
 
 ```python
 def all_fib(n):
@@ -65,5 +74,21 @@ all_fib(7)
 ```
 
 # Complexity: O(N)
-# All previous actions are already computed
+**All previous actions are already computed**
+
+**Explaination**
+- Check    
+    - the fib function first checks if the result for that index is already available in the memo list. 
+    - If it is, the function simply returns the precomputed value, avoiding the need for redundant computation.
+- Calculate
+    - If the result is not found in the memo list
+    - the function proceeds with the recursive calculation
+    - It calls itself for indices n-1 and n-2 and passes the memo list along
+- Re-Check
+    - If the result for either of those indices is not available in the memo list
+    - it recursively calculates it until all necessary Fibonacci numbers are computed
+    - The computed values are stored in the memo list for future use.
+
+> The code is now more efficient for larger values of n.
+>> The updated code with memoization improves the time complexity of the Fibonacci number calculation from exponential (O(2^(n+1))) to linear (O(n)).
 
