@@ -3,8 +3,32 @@
 Big-O complexity can be visualized with this graph:
 ![The Big-O](https://i.sstatic.net/WcBRI.png "Big-O")
 
+Big-O notation is a `relative` `representation` of the `complexity` of an algorithm.
+- relative
+    - you can only compare apples to apples. 
+    - a comparison of two algorithms that does similar work.
+- representation
+    - reduces the comparison between algorithms to a single variable.
+- complexity
+    - how many CPU cycles required to solve a problem when compared to a simpler problem
 
 
+# Example
+- Arithmetic
+    - Take two numbers (123456 and 789012). 
+    - A basic arithmetic operations: addition
+    - It is an operation or a problem. 
+    - A method of solving these is called an algorithm.
+
+- 10000 + 20000
+    - 5 addition operations
+- 100 digit number + 100 digit number
+    - 100 addition operations
+- 10,000 digit number + 10,000 digit number
+    - 10,000 addition operations
+
+> complexity (being the number of operations) is directly proportional to the number of digits n in the larger number. 
+>> We call this O(n) or linear complexity.
 
 
 
