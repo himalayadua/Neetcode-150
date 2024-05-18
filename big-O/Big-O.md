@@ -31,6 +31,26 @@ Big-O notation is a `relative` `representation` of the `complexity` of an algori
 >> We call this O(n) or linear complexity.
 
 
+- Logarithmic
+    - as the input size increases, the execution time increases, but at a much slower rate compared to linear growth.
+    - increase in execution time is not proportional to number of elements.
+- Example
+    - Algorithm takes 1 second to process 100 elements
+    - takes 2 seconds to process 10,000 elements
+- In algorithms with a time complexity of O(log n), such as binary search, the array size is typically reduced by half at each iteration. This reduction happens because these algorithms are designed to divide the search space in half at each step, allowing for efficient searching or processing of elements.
+
+- Another example
+    - let's consider a sorted array of size n. 
+    - In the first iteration of a binary search, you compare the target value with the middle element of the array. 
+    - If the middle element is equal to the target, the search is complete. 
+    - Otherwise, if the target is smaller, you can eliminate the upper half of the array. 
+    - If the target is larger, you can eliminate the lower half of the array. 
+    - This process of dividing the search space in half continues until the target value is found or until the search space becomes empty.
+
+> At each iteration, the size of the remaining search space is halved. This logarithmic reduction in the search space is what leads to the logarithmic time complexity of O(log n). As a result, even with a large input size, the number of iterations required to find the target value remains relatively small.
+
+
+
 
 
 
