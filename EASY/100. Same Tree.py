@@ -20,3 +20,5 @@ class Solution:
 
         # Recursive call to the next level down
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+    
+    
