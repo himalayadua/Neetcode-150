@@ -45,9 +45,3 @@ class Solution:
         
         return res_dummy.next
     
-
-
-
-            
-
-        
