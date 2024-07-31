@@ -1,9 +1,6 @@
 # Approach 1:
 from typing import List
-
-
 class Solution:
-    
     def encode(self, strs: List[str]) -> str:
         res = ""
         for s in strs:
