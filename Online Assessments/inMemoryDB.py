@@ -63,3 +63,53 @@ class inMemoryDB:
 # SCAN_AT <key> <timestamp> — the same as SCAN, but with timestamp of the operation specified.
 # SCAN_BY_PREFIX_AT <key> <prefix> <timestamp> — the same as SCAN_BY_PREFIX, but with timestamp of the operation specified.
 
+# ["SET_AT", "A", "BD", "F", "5"]
+
+    def set_at(self, key: str, field: str, value: str, timestamp: str) -> None:
+        if key not in self.database:
+            self.database[key] = {field, (value, timestamp)}
+        else:
+            self.database[key][field] = (value, timestamp)
+    
+    #database:{"key":{field, value}, "key2":}
+    #database:{"key":{field, (value, timestamp)}, "key2":}
+
+    def set_at_with_ttl(self, key: str, field: str, value: str, timestamp: str, ttl: str) -> None:
+        if key not in self.database:
+            self.database[key] = {field, (value, timestamp+ttl)}
+        else:
+            self.database[key][field] = (value, timestamp+ttl)
+
+    # open-ended = how to store ttl
+    # timestamp+ttl 
+    # or val, timestamp, ttl
+
+    # ["SET_AT_WITH_TTL", "X", "Y", "Z", "2", "15"]
+    # ["DELETE_AT", "X", "Y", "20"] 
+
+    def delete_at(self, key: str, field: str, timestamp: str) -> bool:
+        if key in self.database:
+            if self.database[key][field][1] > timestamp:
+                                        #17     #20
+                del self.database[key][field]
+                return True
+            else:
+                return False
+        else:
+            return False
+    
+    # ["SET_AT", "A", "B", "C", "1"], 
+    # ["SET_AT_WITH_TTL", "X", "Y", "Z", "2", "15"], 
+    # ["GET_AT", "X", "Y", "3"]
+
+    # returns "Y(Z)" 
+    def get_at(self, key: str, field: str, timestamp: str) -> str:
+        if key not in self.database:
+            return ""
+        else:
+            if self.database[key][field][1] > timestamp: 
+                f = self.database[key].name
+                v = self.database[key][field][0]
+                return f"{f}({v})"
+    
+    
