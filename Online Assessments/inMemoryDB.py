@@ -112,4 +112,22 @@ class inMemoryDB:
                 v = self.database[key][field][0]
                 return f"{f}({v})"
     
+    # ["SCAN_AT", "A", "13"]
+    def scan_at(self, key: str, timestamp: str) -> list[str]:
+        if key not in self.database:
+            return []
+        else:
+            strn = [f"{field}({value[0]})" for field, value in sorted(self.database[key].items()) if value[1] > timestamp]
+            # list comprehension
+            # <expression> for-loop <variable-n> in [list]{dict} if <condition>
+            return strn
+        
     
+    def scan_by_prefix_at(self, key: str, prefix: str, timestamp: str) -> list[str]:
+        if key not in self.database:
+            return []
+        else:
+            strn = [f"{field}({value[0]})" for field, value in sorted(self.database[key].items()) if value[1] > timestamp and field.startswith(prefix)]
+            # list comprehension
+            
+            return strn
