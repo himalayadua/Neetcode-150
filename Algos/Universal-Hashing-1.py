@@ -40,16 +40,16 @@ class ChainedHashTable:
 
 # Sample test for the hash table implementation
 people = [
-    ("Swathi Arasu", "Swathi.Arasu@example.com"),
-    ("Akram Bayat", "Akram.Bayat@example.com"),
-    ("Mengfei Cai", "Mengfei.Cai@example.com"),
-    ("Shreya Chavan", "Shreya.Chavan@example.com"),
-    ("Mengxiao Du", "Mengxiao.Du@example.com"),
-    ("Himalaya Dua", "Himalaya.Dua@example.com"),
-    ("Kaustubha Eluri", "Kaustubha.Eluri@example.com"),
-    ("Yonghua Fu", "Yonghua.Fu@example.com"),
-    ("Siyi Gao", "Siyi.Gao@example.com"),
-    ("Alwin Jacob", "Alwin.Jacob@example.com")
+    ("Swathi", "Swathi@example.com"),
+    ("Akram", "Akram@example.com"),
+    ("Cai", "Cai@example.com"),
+    ("Shreya", "Shreya@example.com"),
+    ("Mengxiao", "Mengxiao@example.com"),
+    ("Himalaya", "Himalaya.Dua@example.com"),
+    ("Eluri", "Eluri@example.com"),
+    ("Fu", "Fu@example.com"),
+    ("Siyi", "Siyi@example.com"),
+    ("Jacob", "Jacob@example.com")
 ]
 
 hash_table = ChainedHashTable(size=10)
@@ -60,47 +60,47 @@ for name, email in people:
 hash_table.display()
 
 # Testing retrieval of existing and non-existing keys
-print(hash_table.get("Kaustubha Eluri"))  # Should return "alice@example.com"
-print(hash_table.get("Swathi Arasu"))   # Should return None (not found)
+print(hash_table.get("Eluri"))  # Should return "alice@example.com"
+print(hash_table.get("Swathi"))   # Should return None (not found)
 
 # Test retrieval of a non-existing key
 print(hash_table.get("John"))  # Should return (None, None)
 
 [[], [], [], [], [], [], [], [], [], []]
 Index calculated: 9
-[[], [], [], [], [], [], [], [], [], [('Swathi Arasu', 'Swathi.Arasu@example.com')]]
+[[], [], [], [], [], [], [], [], [], [('Swathi', 'Swathi@example.com')]]
 Index calculated: 7
-[[], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com')]]
+[[], [], [], [], [], [], [], [('Akram', 'Akram@example.com')], [], [('Swathi', 'Swathi@example.com')]]
 Index calculated: 9
-[[], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com')]]
+[[], [], [], [], [], [], [], [('Akram', 'Akram@example.com')], [], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com')]]
 Index calculated: 1
-[[], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com')]]
+[[], [('Shreya', 'Shreya@example.com')], [], [], [], [], [], [('Akram', 'Akram@example.com')], [], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com')]]
 Index calculated: 9
-[[], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+[[], [('Shreya', 'Shreya@example.com')], [], [], [], [], [], [('Akram', 'Akram@example.com')], [], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com'), ('Mengxiao', 'Mengxiao@example.com')]]
 Index calculated: 0
-[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya', 'Shreya@example.com')], [], [], [], [], [], [('Akram', 'Akram@example.com')], [], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com'), ('Mengxiao', 'Mengxiao@example.com')]]
 Index calculated: 8
-[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya', 'Shreya@example.com')], [], [], [], [], [], [('Akram', 'Akram@example.com')], [('Eluri', 'Eluri@example.com')], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com'), ('Mengxiao', 'Mengxiao@example.com')]]
 Index calculated: 7
-[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com'), ('Yonghua Fu', 'Yonghua.Fu@example.com')], [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya', 'Shreya@example.com')], [], [], [], [], [], [('Akram', 'Akram@example.com'), ('Fu', 'Fu@example.com')], [('Eluri', 'Eluri@example.com')], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com'), ('Mengxiao', 'Mengxiao@example.com')]]
 Index calculated: 4
-[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [('Siyi Gao', 'Siyi.Gao@example.com')], [], [], [('Akram Bayat', 'Akram.Bayat@example.com'), ('Yonghua Fu', 'Yonghua.Fu@example.com')], [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya', 'Shreya@example.com')], [], [], [('Siyi', 'Siyi@example.com')], [], [], [('Akram', 'Akram@example.com'), ('Fu', 'Fu@example.com')], [('Eluri', 'Eluri@example.com')], [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com'), ('Mengxiao', 'Mengxiao@example.com')]]
 Index calculated: 1
 
 
 Index 0: [('Himalaya Dua', 'Himalaya.Dua@example.com')]
-Index 1: [('Shreya Chavan', 'Shreya.Chavan@example.com'), ('Alwin Jacob', 'Alwin.Jacob@example.com')]
+Index 1: [('Shreya', 'Shreya@example.com'), ('Jacob', 'Jacob@example.com')]
 Index 2: []
 Index 3: []
-Index 4: [('Siyi Gao', 'Siyi.Gao@example.com')]
+Index 4: [('Siyi', 'Siyi@example.com')]
 Index 5: []
 Index 6: []
-Index 7: [('Akram Bayat', 'Akram.Bayat@example.com'), ('Yonghua Fu', 'Yonghua.Fu@example.com')]
-Index 8: [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')]
-Index 9: [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]
+Index 7: [('Akram', 'Akram@example.com'), ('Fu', 'Fu@example.com')]
+Index 8: [('Eluri', 'Eluri@example.com')]
+Index 9: [('Swathi', 'Swathi@example.com'), ('Cai', 'Cai@example.com'), ('Mengxiao', 'Mengxiao@example.com')]
 
 
-Kaustubha.Eluri@example.com
-Swathi.Arasu@example.com
+Eluri@example.com
+Swathi@example.com
 
 None

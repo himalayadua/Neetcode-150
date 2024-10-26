@@ -80,16 +80,16 @@ def next_prime(n):
 
 # Sample test for the hash table implementation with MACs
 people = [
-   ("Swathi Arasu", "Swathi.Arasu@example.com"),
-    ("Akram Bayat", "Akram.Bayat@example.com"),
-    ("Mengfei Cai", "Mengfei.Cai@example.com"),
-    ("Shreya Chavan", "Shreya.Chavan@example.com"),
-    ("Mengxiao Du", "Mengxiao.Du@example.com"),
-    ("Himalaya Dua", "Himalaya.Dua@example.com"),
-    ("Kaustubha Eluri", "Kaustubha.Eluri@example.com"),
-    ("Yonghua Fu", "Yonghua.Fu@example.com"),
-    ("Siyi Gao", "Siyi.Gao@example.com"),
-    ("Alwin Jacob", "Alwin.Jacob@example.com")
+    ("Swathi", "Swathi@example.com"),
+    ("Akram", "Akram@example.com"),
+    ("Cai", "Cai@example.com"),
+    ("Shreya", "Shreya@example.com"),
+    ("Mengxiao", "Mengxiao@example.com"),
+    ("Himalaya", "Himalaya.Dua@example.com"),
+    ("Eluri", "Eluri@example.com"),
+    ("Fu", "Fu@example.com"),
+    ("Siyi", "Siyi@example.com"),
+    ("Jacob", "Jacob@example.com")
 ]
 
 mac_key = "my_secret_key"
@@ -101,8 +101,8 @@ for name, email in people:
 hash_table.display()
 
 # Testing retrieval of existing and non-existing keys
-print(hash_table.get("Kaustubha Eluri")) 
-print(hash_table.get("Swathi Arasu"))  
+print(hash_table.get("Eluri")) 
+print(hash_table.get("Swathi"))  
 
 # Test retrieval of a non-existing key
 print(hash_table.get("John"))  # Should return (None, None)
@@ -110,36 +110,36 @@ print(hash_table.get("John"))  # Should return (None, None)
 [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
 Load factor threshold: 0.0
 Index calculated: 0
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
 Load factor threshold: 0.058823529411764705
 Index calculated: 9
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [], [], [], [], [], [], []]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [], [], [], [], [], [], []]
 Load factor threshold: 0.11764705882352941
 Index calculated: 14
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [], [], [], [], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [], []]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [], [], [], [], [('Cai', 'Cai@example.com', 4253737963)], [], []]
 Load factor threshold: 0.17647058823529413
 Index calculated: 15
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [], [], [], [], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520)], []]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [], [], [], [], [('Cai', 'Cai@example.com', 4253737963)], [('Shreya', 'Shreya@example.com', 2205024520)], []]
 Load factor threshold: 0.23529411764705882
 Index calculated: 10
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [('Mengxiao Du', 'Mengxiao.Du@example.com', 432258665)], [], [], [], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520)], []]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [('Mengxiao', 'Mengxiao@example.com', 432258665)], [], [], [], [('Cai', 'Cai@example.com', 4253737963)], [('Shreya', 'Shreya@example.com', 2205024520)], []]
 Load factor threshold: 0.29411764705882354
 Index calculated: 16
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [('Mengxiao Du', 'Mengxiao.Du@example.com', 432258665)], [], [], [], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [('Mengxiao', 'Mengxiao@example.com', 432258665)], [], [], [], [('Cai', 'Cai@example.com', 4253737963)], [('Shreya', 'Shreya@example.com', 2205024520)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
 Load factor threshold: 0.35294117647058826
 Index calculated: 15
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [('Mengxiao Du', 'Mengxiao.Du@example.com', 432258665)], [], [], [], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520), ('Kaustubha Eluri', 'Kaustubha.Eluri@example.com', 1237542427)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [('Mengxiao', 'Mengxiao@example.com', 432258665)], [], [], [], [('Cai', 'Cai@example.com', 4253737963)], [('Shreya', 'Shreya@example.com', 2205024520), ('Eluri', 'Eluri@example.com', 1237542427)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
 Load factor threshold: 0.4117647058823529
 Index calculated: 13
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [('Mengxiao Du', 'Mengxiao.Du@example.com', 432258665)], [], [], [('Yonghua Fu', 'Yonghua.Fu@example.com', 2640219225)], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520), ('Kaustubha Eluri', 'Kaustubha.Eluri@example.com', 1237542427)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [('Mengxiao', 'Mengxiao@example.com', 432258665)], [], [], [('Fu', 'Fu@example.com', 2640219225)], [('Cai', 'Cai@example.com', 4253737963)], [('Shreya', 'Shreya@example.com', 2205024520), ('Eluri', 'Eluri@example.com', 1237542427)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
 Load factor threshold: 0.47058823529411764
 Index calculated: 15
-[[('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)], [('Mengxiao Du', 'Mengxiao.Du@example.com', 432258665)], [], [], [('Yonghua Fu', 'Yonghua.Fu@example.com', 2640219225)], [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)], [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520), ('Kaustubha Eluri', 'Kaustubha.Eluri@example.com', 1237542427), ('Siyi Gao', 'Siyi.Gao@example.com', 2027001880)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
+[[('Swathi', 'Swathi@example.com', 67790305)], [], [], [], [], [], [], [], [], [('Akram', 'Akram@example.com', 1483322508)], [('Mengxiao', 'Mengxiao@example.com', 432258665)], [], [], [('Fu', 'Fu@example.com', 2640219225)], [('Cai', 'Cai@example.com', 4253737963)], [('Shreya', 'Shreya@example.com', 2205024520), ('Eluri', 'Eluri@example.com', 1237542427), ('Siyi', 'Siyi@example.com', 2027001880)], [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]]
 Load factor threshold: 0.5294117647058824
 Index calculated: 13
 
 
-Index 0: [('Swathi Arasu', 'Swathi.Arasu@example.com', 67790305)]
+Index 0: [('Swathi', 'Swathi@example.com', 67790305)]
 Index 1: []
 Index 2: []
 Index 3: []
@@ -148,16 +148,16 @@ Index 5: []
 Index 6: []
 Index 7: []
 Index 8: []
-Index 9: [('Akram Bayat', 'Akram.Bayat@example.com', 1483322508)]
-Index 10: [('Mengxiao Du', 'Mengxiao.Du@example.com', 432258665)]
+Index 9: [('Akram', 'Akram@example.com', 1483322508)]
+Index 10: [('Mengxiao', 'Mengxiao@example.com', 432258665)]
 Index 11: []
 Index 12: []
-Index 13: [('Yonghua Fu', 'Yonghua.Fu@example.com', 2640219225), ('Alwin Jacob', 'Alwin.Jacob@example.com', 1230626306)]
-Index 14: [('Mengfei Cai', 'Mengfei.Cai@example.com', 4253737963)]
-Index 15: [('Shreya Chavan', 'Shreya.Chavan@example.com', 2205024520), ('Kaustubha Eluri', 'Kaustubha.Eluri@example.com', 1237542427), ('Siyi Gao', 'Siyi.Gao@example.com', 2027001880)]
+Index 13: [('Fu', 'Fu@example.com', 2640219225), ('Jacob', 'Jacob@example.com', 1230626306)]
+Index 14: [('Cai', 'Cai@example.com', 4253737963)]
+Index 15: [('Shreya', 'Shreya@example.com', 2205024520), ('Eluri', 'Eluri@example.com', 1237542427), ('Siyi', 'Siyi@example.com', 2027001880)]
 Index 16: [('Himalaya Dua', 'Himalaya.Dua@example.com', 4017076411)]
 
-('Kaustubha.Eluri@example.com', 1237542427)
-('Swathi.Arasu@example.com', 67790305)
+('Eluri@example.com', 1237542427)
+('Swathi@example.com', 67790305)
 
 (None, None)

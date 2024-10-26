@@ -77,16 +77,16 @@ def next_prime(n):
 
 # Sample test for the hash table implementation with MACs
 people = [
-    ("Swathi Arasu", "Swathi.Arasu@example.com"),
-    ("Akram Bayat", "Akram.Bayat@example.com"),
-    ("Mengfei Cai", "Mengfei.Cai@example.com"),
-    ("Shreya Chavan", "Shreya.Chavan@example.com"),
-    ("Mengxiao Du", "Mengxiao.Du@example.com"),
-    ("Himalaya Dua", "Himalaya.Dua@example.com"),
-    ("Kaustubha Eluri", "Kaustubha.Eluri@example.com"),
-    ("Yonghua Fu", "Yonghua.Fu@example.com"),
-    ("Siyi Gao", "Siyi.Gao@example.com"),
-    ("Alwin Jacob", "Alwin.Jacob@example.com")
+    ("Swathi", "Swathi@example.com"),
+    ("Akram", "Akram@example.com"),
+    ("Cai", "Cai@example.com"),
+    ("Shreya", "Shreya@example.com"),
+    ("Mengxiao", "Mengxiao@example.com"),
+    ("Himalaya", "Himalaya@example.com"),
+    ("Eluri", "Eluri@example.com"),
+    ("Fu", "Fu@example.com"),
+    ("Siyi", "Siyi@example.com"),
+    ("Jacob", "Jacob@example.com")
 ]
 
 mac_key = "my_secret_key"
@@ -98,8 +98,8 @@ for name, email in people:
 hash_table.display()
 
 # Testing retrieval of existing and non-existing keys
-print(hash_table.get("Kaustubha Eluri")) 
-print(hash_table.get("Swathi Arasu"))  
+print(hash_table.get("Eluri")) 
+print(hash_table.get("Swathi"))  
 
 # Test retrieval of a non-existing key
 print(hash_table.get("John"))  # Should return (None, None)
