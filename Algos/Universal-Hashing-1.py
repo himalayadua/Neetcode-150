@@ -17,6 +17,8 @@ class ChainedHashTable:
 
     def set(self, key, value):
         index = self.hash_func.hash(key)
+        print(self.table)
+        print(f"Index calculated: {index}")
         # Check if key exists and update
         for i, (k, v) in enumerate(self.table[index]):
             if k == key:
@@ -60,3 +62,45 @@ hash_table.display()
 # Testing retrieval of existing and non-existing keys
 print(hash_table.get("Kaustubha Eluri"))  # Should return "alice@example.com"
 print(hash_table.get("Swathi Arasu"))   # Should return None (not found)
+
+# Test retrieval of a non-existing key
+print(hash_table.get("John"))  # Should return (None, None)
+
+[[], [], [], [], [], [], [], [], [], []]
+Index calculated: 9
+[[], [], [], [], [], [], [], [], [], [('Swathi Arasu', 'Swathi.Arasu@example.com')]]
+Index calculated: 7
+[[], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com')]]
+Index calculated: 9
+[[], [], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com')]]
+Index calculated: 1
+[[], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com')]]
+Index calculated: 9
+[[], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+Index calculated: 0
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+Index calculated: 8
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com')], [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+Index calculated: 7
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [], [], [], [('Akram Bayat', 'Akram.Bayat@example.com'), ('Yonghua Fu', 'Yonghua.Fu@example.com')], [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+Index calculated: 4
+[[('Himalaya Dua', 'Himalaya.Dua@example.com')], [('Shreya Chavan', 'Shreya.Chavan@example.com')], [], [], [('Siyi Gao', 'Siyi.Gao@example.com')], [], [], [('Akram Bayat', 'Akram.Bayat@example.com'), ('Yonghua Fu', 'Yonghua.Fu@example.com')], [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')], [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]]
+Index calculated: 1
+
+
+Index 0: [('Himalaya Dua', 'Himalaya.Dua@example.com')]
+Index 1: [('Shreya Chavan', 'Shreya.Chavan@example.com'), ('Alwin Jacob', 'Alwin.Jacob@example.com')]
+Index 2: []
+Index 3: []
+Index 4: [('Siyi Gao', 'Siyi.Gao@example.com')]
+Index 5: []
+Index 6: []
+Index 7: [('Akram Bayat', 'Akram.Bayat@example.com'), ('Yonghua Fu', 'Yonghua.Fu@example.com')]
+Index 8: [('Kaustubha Eluri', 'Kaustubha.Eluri@example.com')]
+Index 9: [('Swathi Arasu', 'Swathi.Arasu@example.com'), ('Mengfei Cai', 'Mengfei.Cai@example.com'), ('Mengxiao Du', 'Mengxiao.Du@example.com')]
+
+
+Kaustubha.Eluri@example.com
+Swathi.Arasu@example.com
+
+None
